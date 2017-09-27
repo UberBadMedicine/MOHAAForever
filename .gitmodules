@@ -1,0 +1,19 @@
+[submodule "Binaries"]
+	path = Binaries
+	url = git@dev.x-null.net:mohue4/mohue-binaries.git
+
+[submodule "Content"]
+	path = Content
+	url = git@dev.x-null.net:mohue4/mohue-assets.git
+
+[submodule "RawContent"]
+	path = RawContent
+	url = git@dev.x-null.net:mohue4/mohue-assets-raw.git
+
+[submodule "Source"]
+	path = Source
+	url = git@dev.x-null.net:mohue4/mohue-game_code.git
+
+[submodule "Tools"]
+	path = Tools
+	url = git@dev.x-null.net:mohue4/mohue-tools.git
