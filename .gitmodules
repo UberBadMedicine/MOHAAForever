@@ -12,7 +12,7 @@
 
 [submodule "Source"]
 	path = Source
-	url = git@dev.x-null.net:mohue4/mohue-game_code.git
+	url = git@dev.x-null.net:mohue4/mohue-game_source.git
 
 [submodule "Tools"]
 	path = Tools
