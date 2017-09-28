@@ -1,0 +1,249 @@
+-------------------- OLD COMENTS -----------------------------------------
+Add equipment jingle to player footstep
+Add random sound notify
+add attach to ladder
+add detach from ladder
+add up down ladder etc 
+continue to fix player animation instance state check functions
+add viewkick
+add weapon firing , bullets etc
+add decals
+add weapon effects, tracers etc
+check why player->landed is not passing a surface material
+fix swapping state files or use state inception
+fix wrist issues on player viewmodel
+fix import of some 3rd person anims.
+fix some old SKD version imports. Manon for example is on her back
+Add player position, standing, crouching, prone etc
+Add movement types , walking / running. (ue4 has movement types but not walking)
+Use weapon walk speed
+Fix crosshair
+run / walk toggle
+drop weapon
+detect weapon switching
+improve button -> anim graph mapping
+func_barrel
+func_area (for naming an area of a map for game types)
+Item hud
+lower idle anim -30
+
+--------------------- END COMMENTS ------------------------------------
+
+-------------------- Functionality created  and Tools ----------------------------
+
+                    -------- Tools Created --------
+- Created converter
+- CrazyBump
+- SSbump_Generator_5_3
+- xnormal
+- AwesomeBumpv4
+- InsaneBump2_5
+- Visual Assist
+                    -------------------------------
+
+                    ------------- HUD -------------
+- Added crosshair
+- Added Health Bar
+- Added banner message
+- Added Compass
+- Added unknown weapon HUD
+- Added mohmenu textures
+- Added loading bar menu
+- Added default loading deathmatch menu
+- Added MoviePlayer
+- Added LoadingScreen slate
+- MOHAA Icon
+- Added new HUDs
+                    -------------------------------
+
+                    ------- Player Animations ----- 
+- Added viewmodel rifle walk temp anim
+- Added Reload functions
+- States??
+- Lean Support
+- Remaked walking sounds
+- Linked 3rd person to a rifle state file
+- Gun firing in 3rd Person
+- Added ThirdPerson property
+- set Camera default relative location
+- PlayerPawn will now cast a shadow in first person
+                    -------------------------------
+
+                   ---------- Player Weapons ------
+- Added M1 Garand
+- Addec colt45
+- Added BAR (needs to work)
+- Added M2Frag_Grenade
+- Added KAR98
+- Added kar98 w mortar
+
+                    ------------- Maps Added ( Dont know if they are finish or not ) ------------
+- mohdm1 
+- mohdm2
+- mohdm3
+- mohdm4
+- mohdm5
+- mohdm6
+- mohdm7
+- objteam1
+- objteam2
+- objteam3
+- objteam4
+                    -------------------------------
+
+                    ------------ Models -----------
+- Flourbag
+- Oak tree
+- Cagelight
+- Beds and wardrobes
+- Cagelight with spotlight
+- Lightposts
+- Hanging Lamps
+- Candles
+- German Shepard (dog)
+- P47 Airplane
+- Boats
+- Fireplace Fire
+- HedgeHogs
+- Barbed Wire
+- Dead moths
+- Clock
+- Fog
+- King tiger static
+- Alot of vehicles
+- Added kar98grenade animation
+                    -------------------------------
+
+                    ----------- Functions ---------
+- Added Projectile Class
+- Defined USE key(e)
+- Obj Trigger Added
+- Added getclip size
+- Added SHIFT + X keys for leaning
+- added Func_ladder
+- New game instance and default font 
+- Added PlayerBaseStart
+- Added Deatmatch game mode
+- Stopwatch
+- Hud_stopwatch
+- Ladders detection in animation graphs
+- Radial damage in explosion
+- Func_door
+- Trigger_use
+- Renamed AMOHPlayer to PlayerPawn
+- Trigger_stopwatch
+- Footsteps sounds
+- Implemented PlayerStateEx
+- New enum classes
+- Weapon utilites
+- Triggering only available with authority
+- Using EFireMode enum
+- Added new deathmatch variables
+- Added EMeansOfDeath
+- Added new player variables and functions
+- Added PlayerDamage
+- Added PlayerKilled
+- Added Immunity functions
+- Added ETeamType
+- Storing the player's buttons flag instead of checking for player's current ucmd
+- Changed activeWeaponList to a TArray
+- Player can now use multiple triggers at once
+- Replicating the player's button for the animation instance
+- Added MessageBox Widget for game messages
+- Added widget variables for weapon
+- Added cg.3rd_person console command
+- Added CenterPrint
+- Dm manage
+- Added pain feature in the compass
+- Added a message when the player is preparing for deployment
+- Using the direction from the owner to actor instead of the trace impact direction
+- Added persistent data when traveling maps
+- Added pain/blend functions
+- added player funcs, dm manager to deathmatch and team additions
+- Added explosion sounds
+- Added impact sounds
+- Added support of bullet penetration through walls like in MOH:BreakThrough (but with better support)
+- Now set a default bullet class for the primary firemode
+- Added BoneNameToLocation and WeaponTypeNameToWeaponType
+- Added crouch key
+- Added uniquefaces parameters for BSP, to treat each face as unique instead of merging faces by shaders.
+- Added GetCurrentGameMode
+- Added damage functions
+- Added SetFromDamageType for FDamageData
+- Added SetPlayerDefaults
+- Added WeaponState class
+- Using GetWorldContexts instead of GetWorld in GEngine
+- Impltemend weapon states
+- Added c++ classes redirectors
+- Added MOHPlayerInput class for binds with commands
+- Added MOHPlayerMovement variable for easy access
+- Moved input code to MOHPlayerController. The PlayerController is now responsible of controlling the PlayerPawn.
+- Added weapon fire/melee code and variables
+- Added firing code and a proper handling of states.
+- Added new classes for MP support
+- Changed reference to fonts
+- Added MOHSentientMovementComponent for Sentient
+- Aiming is now fully functional
+- Added ToggleAim, and ToggleCrouch action mappings
+- Added MOHMovementComponent for doors
+- Added support of Use/Holster
+- Added new functions to support attachments
+- Added grenade additive pose
+- Added ToggleSprint and ToggleProne
+- Added CanSprint function
+- Added ToggleProne and ToggleSprint
+- Added Reload
+- Added FSavedMove_Sentient and FNetworkPredictionData_Client_Sentient structures
+- Added support of sprint and dummy implementation of prone
+- Added support of sprint and dummy support of prone
+- Added ToggleProne and ToggleSprint
+- Added C++ Physical materials
+- Added projectile collision profile
+- Added PlayerView structures
+- Added ECC_Projectile
+- Added support of charging weapons
+- Added FPlayerViewSteps for smooth stairs climbing
+- Added bCanClimb
+- Added FuncWindow class
+- Added state classes
+- Added inventory widget
+- Added MOHWeapon_Grenade class for grenades
+- Added WeaponWidget
+                    --------------------------------
+
+                    ------- Removed Functions ------
+- Disabled eye adaptation
+                    --------------------------------
+
+----------------------------------------------------------------------------------------------------------
+
+--------------------- TODO LIST ---------------
+- Bullet attack functions + some state system (Leyok)
+- Create Localization file for languages
+- Create Vehicle functions
+- Create AI/BOT system
+- Finish DM,OBJ and SP maps
+- Create German Shepherd animations (dog)
+- Create Kick/Ban system
+- Create Stats system
+- Create Scoreboard
+- Create\Use masterserver (Steam?)
+- Add support to another functions on the Gametypes BP
+This is good because the Gametypes BP is a server side BP so we can use for mods to run on the server
+
+- Detect player typing on the game ( SH and BT )
+- Create map transitions
+- Create teamwin function
+- Create weapons bar menu
+- Create weapons selection menu
+- Create team selection menu
+- Create get objective location
+- Create teamkill punishment ( SH and BT )
+- Create taunts function
+- Create vote function
+
+Dont know if still missing something.
+Someone put the rest if remember. Thanks!
+
+------------------------------------------------
+
