@@ -1,6 +1,6 @@
 *
-!.gitmodules
 !.gitignore
+!.gitmodules
 !README.txt
 !mohue.png
 !mohue.uproject
