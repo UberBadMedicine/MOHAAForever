@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.18",
+	"EngineAssociation": "4.19",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -14,7 +14,29 @@
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
-				"AIModule"
+				"AIModule",
+				"mohueLoader"
+			]
+		},
+		{
+			"Name": "mohueLoader",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"AdditionalDependencies": [
+				"Engine",
+				"Slate",
+				"SlateCore",
+				"CoreUObject",
+				"UnrealEd",
+				"mohue"
+			]
+		},
+		{
+			"Name": "mohueCache",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"AdditionalDependencies": [
+				"Core",
 			]
 		},
 		{
@@ -27,7 +49,16 @@
 				"SlateCore",
 				"CoreUObject",
 				"UnrealEd",
-				"mohue"
+				"mohue",
+				"mohueLoader"
+			]
+		},
+		{
+			"Name": "mohueFakeDDC",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"AdditionalDependencies": [
+				"Core",
 			]
 		}
 	],
