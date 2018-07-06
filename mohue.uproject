@@ -10,7 +10,6 @@
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
-				"UMG",
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
@@ -27,7 +26,6 @@
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
-				"UnrealEd",
 				"mohue"
 			]
 		},
@@ -42,7 +40,7 @@
 		{
 			"Name": "mohueEditor",
 			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit",
+			"LoadingPhase": "PostDefault",
 			"AdditionalDependencies": [
 				"Engine",
 				"Slate",
