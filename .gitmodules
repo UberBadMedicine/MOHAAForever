@@ -8,11 +8,6 @@
 	url = git@dev.x-null.net:mohue4/mohue-assets.git
 	ignore = dirty
 
-[submodule "RawContent"]
-	path = RawContent
-	url = git@dev.x-null.net:mohue4/mohue-assets-raw.git
-	ignore = dirty
-
 [submodule "Source"]
 	path = Source
 	url = git@dev.x-null.net:mohue4/mohue-game_source.git
