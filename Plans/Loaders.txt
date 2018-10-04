@@ -1,0 +1,70 @@
+The root path to the game content is /MOHPC/
+
+=== Loaders Design ===
+
+-- Animation --
+=> Import will be executed with the importation of the skeletal mesh
+
+-- BSP --
+=> Import map, import entities and static meshes
+
+=> Process of importation :
+1) Spawn a Directional Light Source, match its properties with sun properties in BSP's worldspawn
+2) Spawn a Sky Light, match its properties with ambient light properties in BSP's worldspawn
+3) Spawn an Exponential Height Fog, match its properties with fog properties in BSP's worldspawn
+4) Spawn an Atmospheric Fog, match its properties with fog properties in BSP's worldspawn
+5) Spawn brushes/patches as static meshes
+6.1) If a brush is suspected to be a part of the Sky (by using a sky shader), delete it, and use a single giant sky sphere instead
+7) Spawn terrain as static mesh
+8) Spawn entities as actors
+
+=> Process of saving map for each actor : 
+1) Serialize the actor's properties as delta by using its original copy (archetype) from the BSP
+1.1) Serialize its binary data (cache, light map index, etc...) aswell, but binary data must NOT be diffed
+
+=> Process of loading map for each actor :
+1) Spawn the actor from the BSP with its corresponding class, gather its properties, etc...
+2) The actor's class is the same as the serialized actor's class? Then serialize saved actor's properties
+2.1) Then also serialize its binary data
+
+=> Actors themselves are NOT saved in the umap, instead they are first spawned using the BSP level and then baked in an user file next to the umap.
+
+-- FX --
+=> Parse FX, also parse FX in the animation section of the TIKI
+=> The init section will have its own particle system
+=> Each animations declared in the TIKI will have their own particle system
+=> Static sprites (like Fire) will also have a particle system.
+==> Gather the anim map from the shader of the static sprite, generate a texture and material
+==> The life of the generated particle system must match with the total time of the shader
+
+-- Shader --
+=> Import shader, store them with the specific path format : '/PathToRoot/scripts/<Shader's file name>/<Shader's name>'
+=> Slashes '/' '\' in the shader's name must be replaced by an underscore '_'
+
+=> Automatic behavior :
+==> Generic shaders will use the generic material (low speculars, low roughness)
+==> Sky shaders will generate a cubemap containing all the 6 textures and use the sky material
+==> Glass shaders will have their specific material
+==> Water shaders will have their specific material
+
+-- Skeletal Mesh --
+=> Import mesh, import corresponding textures/materials and animations as well
+=> For humans meshes : use a single shared skeleton (human_skeleton) to be able to share animations
+
+-- Sound --
+=> Regular importation
+=> MP3 files will be converted to wav (for compatibility with the engine)
+
+-- Static Mesh --
+=> Regular importation, automatically import corresponding shaders and textures
+
+-- Texture --
+=> Regular importation, no tricks are needed
+
+-- Ubersound --
+=> Parse the entire ubersound to gather aliases
+=> Store parsed aliases with the specific path format : '/PathToRoot/ubersound/<Ubersound's file name>/<Sound channel>/<Alias name>'
+=> Will use SoundCue, nodes will be automatically created
+=> In the SoundCue :
+==> A modulator node must be placed if at least one of the random parameters in the alias is used
+==> All aliases with the same name containing a number at the end must be merged into one single alias, a random node must be placed afterwards

@@ -1,0 +1,18 @@
+Root path to the game content : /MOHPC/
+
+Importation process in MOHUE Editor :
+=> Must be triggered ONLY for the specified asset being opened in the root path. Must not waste time with the importation the first time an user starts the editor
+
+Importation process in MOHUE (standard game) when 'moh.pak' is NOT detected in the game directory, or is invalid :
+=> Must open an instance of the UE Editor pointing to the provided project
+==> The UE Editor will then load a specific module (mohueImporter) 
+===> 1) The module must import all content
+===> 2) The module must automatically dump imported content to disk after reaching 1GB of memory usage, into a specific folder
+===> 3) The module must start UnrealPak pointing to the folder containing all assets
+===> 3.1) UnrealPak must save the content to 'moh.pak'
+===> 3.2) An encryption key must be supplied so that it cannot be shared on the internet. Either use the Volume ID, or HWID?
+===> 4) The module must delete the folder containing imported content (to NOT waste disk space)
+
+When 'moh.pak' is detected in the game directory, and is valid :
+=> Load it normally using the encryption key (see 3.1 above)
+=> Mount it to the root path
