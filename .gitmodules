@@ -17,3 +17,8 @@
 	path = Tools
 	url = git@dev.x-null.net:mohue4/mohue-tools.git
 	ignore = dirty
+
+[submodule "WebApp"]
+	path = WebApp
+	url = git@dev.x-null.net:mohue4/mohue-webapp.git
+	ignore = dirty
