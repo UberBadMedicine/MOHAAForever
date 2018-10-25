@@ -22,3 +22,6 @@
 	path = WebApp
 	url = git@dev.x-null.net:mohue4/mohue-webapp.git
 	ignore = dirty
+[submodule "Documentation"]
+	path = Documentation
+	url = git@dev.x-null.net:mohue4/mohue-documentation.git
