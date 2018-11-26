@@ -25,6 +25,8 @@
 [submodule "Documentation"]
 	path = Documentation
 	url = git@dev.x-null.net:mohue4/mohue-documentation.git
+	ignore = dirty
 [submodule "Plugins"]
 	path = Plugins
 	url = git@dev.x-null.net:mohue4/mohue-plugins.git
+	ignore = dirty
