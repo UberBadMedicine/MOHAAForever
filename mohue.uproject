@@ -13,20 +13,15 @@
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
-				"AIModule",
-				"mohueLoader"
+				"AIModule"
 			]
 		},
 		{
-			"Name": "mohueLoader",
-			"Type": "Runtime",
-			"LoadingPhase": "PreDefault",
+			"Name": "mohueDependency",
+			"Type": "Editor",
+			"LoadingPhase": "PreEarlyLoadingScreen",
 			"AdditionalDependencies": [
-				"Engine",
-				"Slate",
-				"SlateCore",
-				"CoreUObject",
-				"mohue"
+				"Engine"
 			]
 		},
 		{
@@ -39,25 +34,16 @@
 			]
 		},
 		{
-			"Name": "mohueCache",
-			"Type": "Runtime",
-			"LoadingPhase": "PostConfigInit",
-			"AdditionalDependencies": [
-				"Core"
-			]
-		},
-		{
 			"Name": "mohueEditor",
 			"Type": "Editor",
-			"LoadingPhase": "PostDefault",
+			"LoadingPhase": "PreDefault",
 			"AdditionalDependencies": [
 				"Engine",
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
 				"UnrealEd",
-				"mohue",
-				"mohueLoader"
+				"mohue"
 			]
 		}
 	],
