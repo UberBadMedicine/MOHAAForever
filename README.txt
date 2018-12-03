@@ -11,8 +11,5 @@ git submodule update --init --recursive
 
 Right click mohue.uproject, select generate. Done
 
-
-
-
-
-
+How to update :
+Run "./UPDATE.sh"
