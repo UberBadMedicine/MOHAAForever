@@ -18,10 +18,11 @@
 		},
 		{
 			"Name": "mohueDependency",
-			"Type": "Editor",
+			"Type": "Runtime",
 			"LoadingPhase": "PreEarlyLoadingScreen",
 			"AdditionalDependencies": [
-				"Engine"
+				"Slate",
+				"SlateCore"
 			]
 		},
 		{
@@ -57,6 +58,10 @@
 			"Name": "SCUE4",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/cff7ca410375488fb0d13221b7446041"
+		},
+		{
+			"Name": "GameImporter",
+			"Enabled": true
 		},
 		{
 			"Name": "ExampleDeviceProfileSelector",
