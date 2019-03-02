@@ -27,7 +27,7 @@
 		},
 		{
 			"Name": "mohueImporter",
-			"Type": "Editor",
+			"Type": "Developer",
 			"LoadingPhase": "PreDefault",
 			"AdditionalDependencies": [
 				"Core",
