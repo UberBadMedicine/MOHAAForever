@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.21",
+	"EngineAssociation": "4.22",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -13,7 +13,8 @@
 				"Slate",
 				"SlateCore",
 				"CoreUObject",
-				"AIModule"
+				"AIModule",
+				"PhysXVehicles"
 			]
 		},
 		{
