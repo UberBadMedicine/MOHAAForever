@@ -1,32 +1,32 @@
 [submodule "Binaries"]
 	path = Binaries
-	url = git@dev.x-null.net:mohue4/mohue-binaries.git
+	url = git@dev.moh-rises.com:mohue/mohue-binaries.git
 	ignore = dirty
 
 [submodule "Content"]
 	path = Content
-	url = git@dev.x-null.net:mohue4/mohue-assets.git
+	url = git@dev.moh-rises.com:mohue/mohue-assets.git
 	ignore = dirty
 
 [submodule "Source"]
 	path = Source
-	url = git@dev.x-null.net:mohue4/mohue-game_source.git
+	url = git@dev.moh-rises.com:mohue/mohue-game_source.git
 	ignore = dirty
 
 [submodule "Tools"]
 	path = Tools
-	url = git@dev.x-null.net:mohue4/mohue-tools.git
+	url = git@dev.moh-rises.com:mohue/mohue-tools.git
 	ignore = dirty
 
 [submodule "WebApp"]
 	path = WebApp
-	url = git@dev.x-null.net:mohue4/mohue-webapp.git
+	url = git@dev.moh-rises.com:mohue/mohue-webapp.git
 	ignore = dirty
 [submodule "Documentation"]
 	path = Documentation
-	url = git@dev.x-null.net:mohue4/mohue-documentation.git
+	url = git@dev.moh-rises.com:mohue/mohue-documentation.git
 	ignore = dirty
 [submodule "Plugins"]
 	path = Plugins
-	url = git@dev.x-null.net:mohue4/mohue-plugins.git
+	url = git@dev.moh-rises.com:mohue/mohue-plugins.git
 	ignore = dirty
