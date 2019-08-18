@@ -65,6 +65,10 @@
 			"Enabled": true
 		},
 		{
+			"Name": "OnlineSubsystemGame",
+			"Enabled": true
+		},
+		{
 			"Name": "ExampleDeviceProfileSelector",
 			"Enabled": false
 		},
