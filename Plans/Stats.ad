@@ -1,0 +1,115 @@
+= Stats
+:toc:
+:toclevels: 3
+:sectnums:
+:source-highlighter: highlight.js
+
+== Uploading stats (specifications)
+
+=== Methods of uploading
+
+==== Frequency updates
+
+* Stats will be uploaded at a certain frequency (every 5 minutes)
+* Stats will be uploaded at end of match
+
+===== Advantages
+
+* Less potential loss of stats
+
+==== Send once
+
+* Stats will be sent at end of match
+
+===== Disadvantages
+
+* More potential loss of stats (e.g if client closes game)
+
+=== Stats to upload
+
+=== Endpoints
+
+Stats must be POSTed by the server to the "/stats" endpoints :
+
+[source,javascript]
+----
+{
+    mapName: "name of the map"
+    players: [{
+        playerId: id
+        stats: {
+            // see 3. Objects
+        }
+    }]
+}
+----
+
+== Handling stats server-side
+
+=== Endpoints
+
+[horizontal]
+.Public endpoint(s)
+/stats:: Main wrapper that will manage to store stats on multiple documents accordingly (by calling private endpoints).
+
+[horizontal]
+.Private endpoint(s)
+/stats-global:: Global stats.
+/stats-maps:: Stats stored for each maps.
+
+[horizontal]
+.Common endpoint(s)
+/profile:: Stats will be stored inside player profiles.
+
+=== Creating/Updating stats
+When stats are uploaded to the /stats endpoint, this last will perform the following steps for each stats object :
+
+. Update the player's profile stats by summing values from the stat object (or create it if it doesn't exist).
+. Update the map stats (specified in the stat object) by summing values from the stat object.
+. Update global stats by summing values from the stat object.
+
+== Objects
+
+=== Stats
+
+[horizontal]
+mapName:: Name of the map to upload stats from
+players:: Array of players objects
+
+=== Player object
+
+[horizontal]
+playerId:: Id (user id) of the player to upload stats to
+stats:: Player stats object
+
+=== Player stats object
+
+[horizontal]
+numShotsFired:: Number of times the player has fired
+numPawnHits:: Number of times the player hit another player
+numCharLocs:: Character locations object indicating the number of times the player hit at these locations
+distanceTraveled:: Self-explanatory. Total distance traveled by the player
+
+=== Character locations object
+
+.These properties represent the number of shots for locations
+* general
+* head
+* helmet
+* neck
+* torso_upper
+* torso_mid
+* torso_lower
+* pelvis
+* r_arm_upper
+* l_arm_upper
+* r_leg_upper
+* l_leg_upper
+* r_arm_lower
+* l_arm_lower
+* r_leg_lower
+* l_leg_lower
+* r_hand
+* l_hand
+* r_foot
+* l_foot
