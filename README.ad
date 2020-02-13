@@ -1,0 +1,18 @@
+= MOHUE
+
+== Init
+
+=== Setup SSH keys
+
+Check https://dev.moh-rises.com/help/ssh/README
+
+=== Clone
+
+- git clone --recursive -j8 git@dev.moh-rises.com:mohue4/mohue.git
+- cd mohue
+- git submodule update --init --recursive
+
+Right click mohue.uproject, select generate. Done
+
+== How to update :
+Run "./UPDATE.sh"
