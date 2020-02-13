@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.24",
+	"EngineAssociation": "Custom",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -19,8 +19,8 @@
 		},
 		{
 			"Name": "mohueDependency",
-			"Type": "Runtime",
-			"LoadingPhase": "PreEarlyLoadingScreen",
+			"Type": "UncookedOnly",
+			"LoadingPhase": "PostSplashScreen",
 			"AdditionalDependencies": [
 				"Slate",
 				"SlateCore"
@@ -28,7 +28,7 @@
 		},
 		{
 			"Name": "mohueImporter",
-			"Type": "DeveloperTool",
+			"Type": "Editor",
 			"LoadingPhase": "PreDefault",
 			"AdditionalDependencies": [
 				"Core",
@@ -158,7 +158,6 @@
 		}
 	],
 	"TargetPlatforms": [
-		"LinuxNoEditor",
 		"WindowsNoEditor"
 	]
 }
