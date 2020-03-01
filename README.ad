@@ -1,18 +1,29 @@
 = MOHUE
 
-== Init
+== Prerequisites
+* https://www.unrealengine.com/en-US/get-now[Unreal Engine] 4.24
+* US copy of Medal of Honor with all expansions (check `MOH:AA Revival`).
 
-=== Setup SSH keys
+== Getting started
+Download and install Unreal Engine (see the version above), and clone the repository recursively.
 
-Check https://dev.moh-rises.com/help/ssh/README
+Start Unreal Engine and open mohue.uproject.
 
-=== Clone
+The first time you open the project, it should prompt you the path to Medal of Honor, to be able to import assets : specify the path containing MOHAA.exe and all expansions.
 
-- git clone --recursive -j8 git@dev.moh-rises.com:mohue4/mohue.git
-- cd mohue
-- git submodule update --init --recursive
-
-Right click mohue.uproject, select generate. Done
-
-== How to update :
-Run "./UPDATE.sh"
+== Folder structure
+[horizontal]
+Binaries:: Modules for running MOHUE.
+Config:: Default MOHUE settings.
+Content:: MOHUE assets.
+Documentation:: Some docs for MOHUE.
+Plans:: Some planned things (not everything is there).
+Plugins:: Plugins specifically made for MOHUE.
+  EventSystem::: MOH:AA event system for easier importation of parameters into MOHUE.
+  GameImporter::: Base plugins with interfaces for importing game content.
+  OnlineSubsystemGame::: Subsystem specifically made for MOHUE Online.
+Saved:: User saved data.
+  ImportedContent/MOHPC::: Imported and converted MOH:AA assets.
+Source:: MOHUE source code (remains private until we find a good license).
+Tools (to be deleted):: Deprecated tools used in the past to convert assets (should no longer exist).
+WebApp:: MOHUE web source code (remains private until we find a good license).
