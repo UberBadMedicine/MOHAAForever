@@ -12,7 +12,7 @@ git clone --recurse-submodules https://gitlab.com/mohue/mohue.git
 
 Start Unreal Engine and open mohue.uproject.
 
-The first time you open the project, it should prompt you the path to Medal of Honor, to be able to import assets : specify the path containing MOHAA.exe and all expansions.
+The first time you open the project, it should prompt you the path to Medal of Honor, to be able to import assets : specify the path containing MOHAA.exe and all expansions. Afterwards, the Engine will compile shaders (it should take around 1h with a standard PC) and continue loading.
 
 == Folder structure
 [horizontal]
