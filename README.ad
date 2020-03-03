@@ -5,7 +5,10 @@
 * US copy of Medal of Honor with all expansions (check `MOH:AA Revival`).
 
 == Getting started
-Download and install Unreal Engine (see the version above), and clone the repository recursively.
+Download and install Unreal Engine (see the version above), and clone the repository recursively :
+```
+git clone --recurse-submodules https://gitlab.com/mohue/mohue.git
+```
 
 Start Unreal Engine and open mohue.uproject.
 
