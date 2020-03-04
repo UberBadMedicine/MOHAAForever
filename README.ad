@@ -1,6 +1,7 @@
 = MOHUE
 
 == Prerequisites
+* https://aka.ms/vs/16/release/vc_redist.x64.exe[Visual C++ runtime x64]
 * https://www.unrealengine.com/en-US/get-now[Unreal Engine] 4.24
 * US copy of Medal of Honor with all expansions (check `MOH:AA Revival`).
 
@@ -16,7 +17,7 @@ The first time you open the project, it should prompt you the path to Medal of H
 
 == Folder structure
 [horizontal]
-Binaries:: Modules for running MOHUE.
+Binaries:: MOHUE modules.
 Config:: Default MOHUE settings.
 Content:: MOHUE assets.
 Documentation:: Some docs for MOHUE.
